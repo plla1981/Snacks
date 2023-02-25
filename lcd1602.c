@@ -3,7 +3,16 @@
 #include <wiringPiI2C.h>
 #include <string.h>
 
-int LCDAddr = 0x27;
+#define LCDAddr			0x27
+
+#define INA219ADDR		0x40
+#define INA219CONF		0x00
+#define INA219SHUNTV	0x01
+#define INA219BUSV		0x02
+#define INA219POWER		0x03
+#define INA219CURRENT	0x04
+#define INA219CAL		0x05
+
 int BLEN = 1;
 int fd;
 
@@ -104,10 +113,17 @@ void write(int x, int y, char data[]){
 void main(){
 	fd = wiringPiI2CSetup(LCDAddr);
 	init();
-	write(0, 0, "A1 B2!");
-	write(1, 4, "");
-	delay(2000);
-	//clear();
+	char str[100];
+	int data = 100;
+	//delay(2000);
+	clear();
+	while (1)
+	{
+		write(0, 0, "A1 B2!");
+		sprintf(str, "%d", data)
+		write(1, 4, "");
+	}
+	
 }
 
 
