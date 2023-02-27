@@ -5,16 +5,9 @@
 
 #define LCDAddr			0x27
 
-#define INA219ADDR		0x40
-#define INA219CONF		0x00
-#define INA219SHUNTV	0x01
-#define INA219BUSV		0x02
-#define INA219POWER		0x03
-#define INA219CURRENT	0x04
-#define INA219CAL		0x05
-
 int BLEN = 1;
 int fd;
+int fd2;
 
 void write_word(int data){
 	int temp = data;
@@ -36,8 +29,8 @@ void send_command(int comm){
 	delay(2);
 	buf &= 0xFB;			// Make EN = 0
 	write_word(buf);
-	printf("send_command buf bit7-4 is %d\n", buf);
-	delay(2000);
+	//printf("send_command buf bit7-4 is %d\n", buf);
+	//delay(2000);
 
 	// Send bit3-0 secondly
 	buf = (comm & 0x0F) << 4;
@@ -46,7 +39,7 @@ void send_command(int comm){
 	delay(2);
 	buf &= 0xFB;			// Make EN = 0
 	write_word(buf);
-	printf("send_command buf bit3-0 is %d\n", buf);
+	//printf("send_command buf bit3-0 is %d\n", buf);
 }
 
 void send_data(int data){
@@ -58,8 +51,8 @@ void send_data(int data){
 	delay(2);
 	buf &= 0xFB;			// Make EN = 0
 	write_word(buf);
-	printf("send_data buf bit7-4 is   %d\n", buf);
-	delay(2000);
+	//printf("send_data buf bit7-4 is   %d\n", buf);
+	//delay(2000);
 
 
 	// Send bit3-0 secondly
@@ -69,7 +62,7 @@ void send_data(int data){
 	delay(2);
 	buf &= 0xFB;			// Make EN = 0
 	write_word(buf);
-	printf("send_data buf bit3-0 is %d\n",buf);
+	//printf("send_data buf bit3-0 is %d\n",buf);
 }
 
 void init(){
@@ -109,19 +102,62 @@ void write(int x, int y, char data[]){
 	}
 }
 
+void ina219init(){
+	u_int16_t config = 0;
+	config |=(0 << 13 | 1 << 11 | 14 << 7 | 14 << 3 | 7);
+	wiringPil2CWriteReg8(fd2, 0, config);
+}
+void calibrate(){
+	u_int16_t digits;
+	float min_lsb, swap;
+	r_shunt = 0.1;
+	min_lsb = 7 / 32767;
+
+	current_lsb = min_lsb;
+    digits=0;
+
+	while( current_lsb > 0.0 ){//If zero there is something weird...
+        if( (u_int16_t)current_lsb / 1){
+        	current_lsb = (u_int16_t) current_lsb + 1;
+        	current_lsb /= pow(10,digits);
+        	break;
+        }
+        else{
+        	digits++;
+            current_lsb *= 10.0;
+        }
+    };
+	swap = (0.04096)/(current_lsb*r_shunt);
+    cal = (u_int16_t)swap;
+    power_lsb = current_lsb * 20;
+	wiringPil2CWriteReg8(fd2, 5, cal);
+} 
+int16_t shuntVoltageRaw(){
+	u_int16_t ret;
+	wiringPil2CWriteReg8(fd2, 1, 0);
+	ret = wiringPil2CReadReg16(fd2, 1);
+	return ret;
+}
 
 void main(){
+	//lcd1602
 	fd = wiringPiI2CSetup(LCDAddr);
 	init();
+	clear();
+	//ina219
+	fd2 = wiringPiI2CSetup(0x40);
+	ina219init();
+	calibrate();
+	int v =shuntVoltageRaw();
 	char str[100];
 	int data = 100;
 	//delay(2000);
-	clear();
+	
 	while (1)
 	{
 		write(0, 0, "A1 B2!");
-		sprintf(str, "%d", data)
-		write(1, 4, "");
+		sprintf(str, "%d", v)
+		write(1, 4, str);
 	}
 	
 }
