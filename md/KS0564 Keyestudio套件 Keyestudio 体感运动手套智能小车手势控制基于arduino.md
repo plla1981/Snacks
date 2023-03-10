@@ -225,7 +225,7 @@ Arduino 软件有很多版本，有wodows,mac linux系统的（如下图），�
 
 在开始所有的项目之前，我们首先要了解下面这片keyestudio NANO开发板，是这个项目的核心开发板。
 
-<div align=center>
+<div align="center" display="flex">
 	<img scr="./img/wps19.png" />
 </div>
 
