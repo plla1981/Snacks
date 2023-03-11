@@ -14,8 +14,6 @@ http://www.keyestudio.com
 
 ------
 
-
-
 **Obtain Information and After-sales Service**          
 
 1. Download address: 
@@ -24,16 +22,12 @@ http://www.keyestudio.com
 
 ------
 
-
-
-**Warning**                            
+**Warning**                             
 
 1. This product contains tiny parts (Screws, copper pillars), so please keep out of reach of children under 7. 
 2. This product contains conductive parts (control board and electronic module). Please operate according to the requirements of tutorials. Improper operation may damage parts due to overheating. Do not touch and immediately disconnect the circuit power.
 
 ------
-
-
 
 **Copyright**                           
 
@@ -47,7 +41,7 @@ If you are interested in our products, please contact to our sales representativ
 
 # **Motion Sensing GloveGesture Control Smart Car for Arduino** 
 
-![img](./img/wps5.png) 
+![img](./en_img/new(1).png) 
 
  
 
@@ -67,7 +61,7 @@ If you are interested in our products, please contact to our sales representativ
       - [**Start Your Program**](#start-your-program)
     - [**Install Library Files**](#install-library-files)
       - [**What is an Arduino Library File?**](#what-is-an-arduino-library-file)
-      - [How to Install a Library File?](#how-to-install-a-library-file)
+      - [**How to Install a Library File?**](#how-to-install-a-library-file)
     - [**Glove Expansion Board**](#glove-expansion-board)
     - [**MPU6050 Basic Information**](#mpu6050-basic-information)
       - [**MPU6050**](#mpu6050)
@@ -174,14 +168,14 @@ If something is found missing, please contact us immediately.
 
 | **NO.** |         **PIC**         |        **Specification**         | **QNT** |
 | :-----: | :---------------------: | :------------------------------: | :-----: |
-|    1    | ![img](./img/wps70.jpg) |          MPU6050 Module          |    1    |
-|    2    | ![img](./img/wps71.png) |   NANO PLUS Development Board    |    1    |
-|    3    | ![img](./img/wps72.jpg) |         DX-BT24 V5.1 BLE         |    1    |
-|    4    | ![img](./img/wps73.jpg) |       NANO Expansion Board       |    1    |
-|    5    | ![img](./img/wps74.jpg) | FY672 Half-Finger Gloves(M size) |    1    |
-|    6    | ![img](./img/wps2.png)  |            USB Cable             |    1    |
+|    1    | ![img](./en_img/new(2).png)  |          MPU6050 Module          |    1    |
+|    2    | ![img](./en_img/new(3).png)  |   NANO PLUS Development Board    |    1    |
+|    3    | ![img](./en_img/new(4).png)  |         DX-BT24 V5.1 BLE         |    1    |
+|    4    | ![img](./en_img/new(5).png)  |       NANO Expansion Board       |    1    |
+|    5    | ![img](./en_img/new(6).png)  | FY672 Half-Finger Gloves(M size) |    1    |
+|    6    | ![img](./en_img/new(7).png)   |            USB Cable             |    1    |
 
- For complete installation, please refer to "[Attachment: Installation Steps](#Attachment: Installation Steps)".
+ For complete installation, please refer to "[Attachment: Installation Steps](#Attachment:-Installation-Steps)".
 
 ------
 
@@ -189,7 +183,7 @@ If something is found missing, please contact us immediately.
 
 ## **Projects**
 
-Note: G and GND on the expansion board are negative poles to connect with G, GND and - on sensors, while V and VCC are positive poles to connect with 5V power interfaces like V, VCC and +.
+<span style="color: rgb(255, 0, 0);">Note: G and GND on the expansion board are negative poles to connect with G, GND and - on sensors, while V and VCC are positive poles to connect with 5V power interfaces like V, VCC and +.</span>
 
 ------
 
@@ -203,19 +197,27 @@ Download the latest version of Arduino IDE: https://www.arduino.cc/.
 
 Click SOFTWARE on the upward side of the page: 
 
-![img](./img/wps2.jpg) 
+
+
+![img](./en_img/new(8).png) 
+
+------
+
+
 
 Select a compatible version. 
 
-![img](./img/wps3.jpg) 
+![img](./en_img/new(9).png) 
+
+------
+
+
 
 Two versions are included in Windows system: for installing and for downloading(a zipped file, directly unzip it to use without installing).
 
- 
-
 Click JUST DOWNLOAD. 
 
-![img](./img/wps4.jpg) 
+![img](./en_img/new(10).png) 
 
 ------
 
@@ -223,7 +225,7 @@ Click JUST DOWNLOAD.
 
 #### **NANO PLUS Development Board**
 
-![img](./img/wps6.png) 
+![img](./en_img/new(11).png) 
 
 The processor core and USB-to-serial port chip of this board respectively adopt ATMEGA328P-AU and CH340G. Compared with ARDUINO NANO, their using methods are exactly the same except driver installation. 
 
@@ -233,9 +235,9 @@ ICSP headers are used for burning firmwares on ATMEGA328P-AU. When using, we pow
 
  
 
-![img](./img/wps7.jpg) 
+![img](./en_img/new(12).png) 
 
-![img](./img/wps7.png) 
+![img](./en_img/new(13).png) 
 
  
 
@@ -280,31 +282,49 @@ The USB-to-serial port chip of the board adopts CH340G, and you need to install 
 
 If it is the first time for the control board to connect to computer, please click Computer -- Properties -- Device Manager: 
 
-![img](./img/wps8.jpg) 
+![img](./en_img/new(14).png) 
+
+------
+
+
 
 Click USB Serial to select“Update Driver”.
 
-![img](./img/wps9.jpg) 
+![img](./en_img/new(15).png) 
+
+------
+
+
 
 Select“browse my computer for drivers”.
 
-![img](./img/wps10.jpg) 
+![img](./en_img/new(16).png) 
 
- 
+------
+
+
 
 Find the folder usb_ch341_3.1.2009.06 in your computer. 
 
-![img](./img/wps11.jpg) 
+![img](./en_img/new(17).png) 
+
+------
+
+
 
 After installation, the following window pop up. 
 
 Click Close to select the serial port.
 
-![img](./img/wps12.jpg) 
+![img](./en_img/new(18).png) 
+
+------
+
+
 
 Click Computer--Properties--Device Manager to select PORT: 
 
-![img](./img/wps13.jpg) 
+![img](./en_img/new(19).png) 
 
 ------
 
@@ -314,15 +334,23 @@ Click Computer--Properties--Device Manager to select PORT:
 
 Open Arduino IDE. 
 
-![img](./img/wps14.jpg) 
+![img](./en_img/new(20).png) 
+
+------
+
+
 
 Click Tools to select Arduino NANO Board.
 
-![img](./img/wps15.jpg) 
+![img](./en_img/new(21).png)
+
+------
+
+
 
 Select the correct COM Port. 
 
-![img](./img/wps16.jpg) 
+![img](./en_img/new(22).png)
 
 ------
 
@@ -332,15 +360,23 @@ Select the correct COM Port.
 
 Click File to select Blink in 01.BASIC in the Example code.
 
-![img](./img/wps17.jpg) 
+![img](./en_img/new(23).png)
+
+------
+
+
 
 Set the board and COM port, and click“√”or“→”to compile/examine and upload the code. 
 
-![img](./img/wps18.jpg) 
+![img](./en_img/new(24).png)
+
+------
+
+
 
 The code is successfully uploaded: 
 
-![img](./img/wps19.jpg) 
+![img](./en_img/new(25).png)
 
 The on-board LED will turn on for 1s and off for 1s. 
 
@@ -366,13 +402,17 @@ Internet carries hundreds of libraries for download. We have listed built-in lib
 
 Click Skerch > Include Library > Add .Zip Library... 
 
-![img](./img/wps20.jpg) 
+![img](./en_img/new(26).png)
+
+------
+
+
 
 Select and click the library file(zip. format) you need to add as library. 
 
-The massage bar will display“Library installed”if the file is successfully upload.
+The massage bar will display “Library installed” if the file is successfully upload.
 
-![img](./img/wps21.jpg) 
+![img](./en_img/new(27).png) 
 
 For more details, please visit our official website: 
 
@@ -390,13 +430,15 @@ It is equipped with UART and I2C communication interfaces as well as two buttons
 
 What’s more, you only need to assemble MPU6050 module and BT24 on the board to complete the installation.
 
-![img](./img/wps22.jpg) 
+![img](./en_img/new(28).png)
 
- 
+------
+
+
 
 Working principle diagram: 
 
-![img](./img/wps23.png) 
+![img](./en_img/new(29).png)
 
 ------
 
@@ -410,19 +452,25 @@ MPU6050 is a 6-axis motion processor(one 3-axis gyroscope and one 3-axis acceler
 
 ------
 
+
 This module is equipped with a 16-pin ADC, which simultaneously reads 6-axis data. Thus, the angular speed, angular angle and the acceleration of the object can be measured. 
 
 It also contains a temperature sensor to detect and monitor the temperature of the chip when operating. 
 
 ------
 
+
 Furthermore, it incorporates an DMP (Digital Motion Processor) to acquire the state of object from original data of gyroscope and accelerometer.
 
-![img](./img/wps24.jpg) 
+![img](./en_img/new(30).png)
+
+------
+
+
 
 Circuit diagram: 
 
-![img](./img/wps25.jpg) 
+![img](./en_img/new(31).png) 
 
  
 
@@ -439,17 +487,17 @@ Circuit diagram:
 
  
 
-l Operating voltage: 3.3V, 5V
+- Operating voltage: 3.3V, 5V
 
-l Static current: 5μA
+- Static current: 5μA
 
-l Rotating current: 3mA
+- Rotating current: 3mA
 
-l Maximum rotation speed: 2000°/s
+- Maximum rotation speed: 2000°/s
 
-l Acceleration scales: ±2g, ±4g, ±8g, ±16g
+- Acceleration scales: ±2g, ±4g, ±8g, ±16g
 
-l Temperature range: –10°C ~ +65°C
+- Temperature range: –10°C ~ +65°C
 
 ***\*For detailed parameters, please refer to the data sheet.\****
 
@@ -469,7 +517,7 @@ The gyroscope accurately measures the rotation speed to get precise information.
 
  
 
-![img](./img/wps26.jpg) 
+![img](./en_img/new(32).png)
 
 ------
 
@@ -495,7 +543,7 @@ I2C(Inter-Integrated Circuit, or IIC) is also called two-wire system or TWI (Two
 
 The biggest advantage of I2C is that it transmits data only by two wires. In addition, its bus connects 127 nodes in parallel for multiple host devices, and slave devices generally do not need an external power supply as the bus transfers power to them.
 
-![img](./img/wps27.jpg) 
+![img](./en_img/new(33).png)
 
 ------
 
@@ -503,9 +551,10 @@ Please pay attention that, the host device manipulates clock signals and data tr
 
 I2C bus is composed of SCL (Serial Clock takes charge of the clock signal) and SDA (Serial Data controls data transmission), and it uses an 8-digit transmission mode. Usually, a byte contains nine clock signals, eight of which transmit data and the last one indicates the end of transmission. 
 
-------
 
 Meanwhile, the bus supports multiple bytes transmission by repeating the previous process. 
+
+------
 
 Basic parts of I2C protocol:  
 
@@ -516,13 +565,13 @@ Basic parts of I2C protocol:
 
 ***\*Serial Port Protocol Timing:\**** 
 
-**(For more details, please refer to :https://www.nxp.com/)**
+**For more details, please refer to :https://www.nxp.com/**
 
-![img](./img/wps28.jpg) 
+![img](./en_img/new(34).png)
 
-![img](./img/wps29.jpg) 
+![img](./en_img/new(35).png)
 
-Arduino provides an I2C protocol collection named as Wire.h, so you can call its functions to realize I2C and I2C/TWI devices communication. 
+Arduino provides an I2C protocol collection named as Wire.h, so you can directly call its functions to realize I2C and I2C/TWI devices communication. 
 
 For detailed introduction, please refer to: https://www.arduino.cc/reference/en/language/functions/communication/wire/
 
@@ -536,7 +585,7 @@ Connect Arduino NANO mainboard and MPU6050 to the expansion board.
 
  
 
-![img](./img/wps30.jpg) 
+![img](./en_img/new(36).png)
 
  
 
@@ -572,13 +621,11 @@ Set the scales of gyroscope and accelerometer. Refer to the register sheet and w
 
 Resolution of Accelerometer: 
 
-![img](./img/wps31.jpg) 
-
- 
+![img](./en_img/new(37).png)
 
 Resolution of Gyroscope: 
 
-![img](./img/wps32.jpg) 
+![img](./en_img/new(38).png) 
 
  
 
@@ -659,6 +706,8 @@ Cut off the interrupt interface and AUX IIC interface, ban FIFO, and set the gyr
 
 This step can calibrate the sensor to make sure a normal state. 
 
+
+
 ***\*Code:\****
 
 ```c++
@@ -674,6 +723,8 @@ mpu.initMPU6050();
 #####  **Data Preparation**
 
 Check whether data are prepared for collection. 
+
+
 
 ***\*Code:\**** 
 
@@ -731,7 +782,7 @@ Place the expansion board smoothly, press and hold the reset button. The more ba
 
 Open Arduino IDE serial monitor, and you will see that the angular speed, gyroscope data and temperature refresh per 0.5s. 
 
-![img](./img/wps33.jpg) 
+![img](./en_img/new(39).png)
 
  
 
@@ -922,8 +973,10 @@ The initial temperature value of MPU6050 cannot be applied in our daily use, hen
 ***\*Conversion Formula:\****
 
 $$
-Temperature in degrees C = (TEMPOUT Register Value as a signed quantity)/340 + 36.53
+Temperature in degrees C =\frac{TEMPOUT Register Value as a signed quantity}{340} + 36.53
 $$
+
+
 ***\*For detailed operations, please refer to the data sheet.\****
 
  
@@ -1064,11 +1117,13 @@ void loop()
 }
 ```
 
+------
+
 
 
 Output the actual temperature value:
 
-![img](./img/wps34.jpg) 
+![img](./en_img/new(40).png)
 
 ------
 
@@ -1094,20 +1149,20 @@ MPU6050 measures the attitude of an object in three dimensions: Roll, Pitch and 
 
 Three-Axis: 
 
-![img](./img/wps35.jpg) 
+![img](./en_img/new(41).png)
 
 An Euler Angle is a rotation angle of an object in three dimensional space whose axis is arbitrarily adjustable.
 
-It includes three angles: Roll Angle, Pitch Angle and Yaw Angle:  
+It includes three angles: Roll Angle, Pitch Angle and Yaw Angle.
 
-| ***Roll Angle*** | **A rotation angle with x-axis as the rotational axis** |
+| **Roll Angle** | **A rotation angle with x-axis as the rotational axis** |
 | ---------------- | ------------------------------------------------------- |
 | **Pitch Angle**  | **A rotation angle with y-axis as the rotational axis** |
 | **Yaw Angle**    | **A rotation angle with z-axis as the rotational axis** |
 
  
 
-![img](./img/wps36.jpg) 
+![img](./en_img/new(42).png)
 
  
 
@@ -1115,11 +1170,11 @@ It includes three angles: Roll Angle, Pitch Angle and Yaw Angle:
 
 When acquiring Yaw Angle, MPU6050 internal gyroscope automatically calibrates and sets its own angle to 0, which will cause a Yaw Angle Null Shift. 
 
-Null shift, which is unavoidable and limited by hardware, is an effect that the detected data occasionally drifts from its null point. 
+A Null shift, which is unavoidable and limited by hardware, is an effect that the detected data occasionally drifts from its null point. 
 
 Therefore, we add a magnetometer to calibrate MPU6050. 
 
-***\*Hence, in the following tutorials, our main contents are Roll Angle and Pitch Angle.\****
+<span style="color: rgb(255, 0, 0);">Hence, in the following tutorials, our main contents are Roll Angle and Pitch Angle.</span>
 
 ------
 
@@ -1149,6 +1204,7 @@ In the algorithm, the change angle is expressed as a quaternion, and it effectiv
 Attitude estimation formula: 
 
 
+
 $$
 (Δφ = qt * qt-1)
 $$
@@ -1156,6 +1212,7 @@ $$
 $$
 qt+1 = qt + (1/α) * Δφ
 $$
+
 
 
 Δφ: the difference value of quaternions, which represents the change angle between two quaternons. 
@@ -1174,7 +1231,7 @@ qt+1: the next quaternon (next attitude), which is calculated through the curren
 
 ####  **Wiring**
 
-![img](./img/wps5.jpg)
+![img](./en_img/new(43).png)
 
 Install MPU6050 on the expansion board and connect it to your computer via USB cable.
 
@@ -1237,12 +1294,11 @@ $$
 
 
 ADC output range is ±32768. 
-
 If we set the measuring range to ±2000°/s, and original ADC reading is 300, the data resolution will be 32768/2000=16.384LSB/(°/s), and the angular speed will be 300/16.384=18.3105(°/s). 
 
  
 
-***\*Code:\**** 
+***\*Code:\****
 
 ```c++
 mpu.readGyroData(gyroCount);    // Read the x/y/z adc values
@@ -1267,6 +1323,8 @@ gyroz = (float)gyroCount[2] * gRes;
 #####  **Calculate Integration Interval**
 
 Acquire the time to calculate the integration interval, and convert it to quaternion .
+
+
 
 ***\*Code:\**** 
 
@@ -1603,9 +1661,9 @@ Download the code to Arduino NANO.
 
 Keep MPU6050 balanced and press the reset button. 
 
-Open the serial port after 3~5s.
+Wait for 3~5s and open the serial port.
 
-![img](./img/wps39.jpg) 
+![img](./en_img/new(44).png) 
 
 1. Acquire ID：0x68 of MPU6050
 2. Self-test and print the test value. 
@@ -2182,17 +2240,17 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 ####  **Bluetooth Module**
 
-Bluetooth Module Host (Straight pins): 
+Host Bluetooth Module (Straight pins): 
 
  
 
-![img](./img/wps40.jpg) 
+![img](./en_img/new(45).png)
 
  
 
-Bluetooth Module Slave (Curved pins): 
+Slave Bluetooth Module (Curved pins): 
 
-![img](./img/wps41.jpg) 
+![img](./en_img/new(46).png)
 
  
 
@@ -2227,9 +2285,11 @@ The most important merits are its flexibility to adjust baud rate and device nam
 
 ***\*Circuit diagram:\**** 
 
-![img](./img/wps42.jpg) 
+![img](./en_img/new(47).png)
 
 ------
+
+
 
 Working modes: 
 
@@ -2240,6 +2300,8 @@ Working modes:
 |      Sleep Mode      | All RAMs stop working.Only a built-in ticking clock is left to awakening the module.Peripheral interfaces and the broadcast are all disabled. |
 
 ------
+
+
 
 UART interface: the default parameter of the serial port: 9600bps/8/n/1 (Baud rate/data bit/none check/stop bit). 
 
@@ -2282,11 +2344,13 @@ AT parameter specifies AT function, such as pairing codes, connecting address an
 
 
 
-A BLE device utilizes one (or both) of the two types of addresses: **Public Device Address and Random Device Address.**
+A BLE device utilizes one (or both) of the two types of addresses: **Public Device Address** and **Random Device Address.**
 
-![img](./img/wps43.jpg) 
+![img](./en_img/new(48).png) 
 
 ------
+
+
 
 **Public Device Address:**
 
@@ -2295,6 +2359,8 @@ It is originated from the classic Bluetooth (BR/EDR) address, which is a 48bits 
 Normally, the address holder must apply to IEEE to pay for it to ensure its uniqueness.
 
 ------
+
+
 
 **Static Device Address:**
 
@@ -2314,7 +2380,7 @@ Generally, we connect device to Bluetooth through USB-to-serial port to manipula
 
  
 
- **AT** **Command Format for Sending:** 
+**AT** **Command Format for Sending:** 
 
 **AT+Command<param1,param2,param3> < CR >< CF >**
 
@@ -2342,11 +2408,11 @@ Generally, we connect device to Bluetooth through USB-to-serial port to manipula
 
 **+Indication<=param1,param2,param3>< CR >< CF >**
 
-- A response command starts with“+”and ends in< CR >< CF >.
+- A response command starts with “+” and ends in < CR >< CF >.
 
-- “=”follows response parameters. 
+- “=” follows response parameters. 
 
-- If a response includes multiple parameters, they will be separated by“，”.
+- If a response includes multiple parameters, they will be separated by “，”.
 
 
 ------
@@ -2357,16 +2423,13 @@ Generally, we connect device to Bluetooth through USB-to-serial port to manipula
 
 **Revise the Bluetooth name as 1234**
 
-- Send: AT+NAME1234
+ Send: AT+NAME1234
 
-- Receive：+NAME=1234
+ Receive：+NAME=1234
 
+OK
 
-​						OK
-
- 
-
-For more commands, please refer to [5.6.5](#AT Command Collection) and the data sheet.
+For more commands, please refer to [5.6.5](#AT-Command-Collection) and the data sheet.
 
 ------
 
@@ -2375,12 +2438,11 @@ For more commands, please refer to [5.6.5](#AT Command Collection) and the data 
 ####  **Wiring**
 
 Connect Bluetooth to the device via USB-to-serial port module. 
-
-***\*Note: Installations of hosts and slave devices are totally same.\****
+<span style="color: rgb(255, 0, 0);">Note: Installations of hosts and slave devices are totally same.</span>
 
 Keyestudio FTDI (original chips) Basic Program: https://www.keyestudio.com/search/?Keyword=ks0277
 
-![img](./img/wps44.jpg) 
+![img](./en_img/new(49).png)
 
  
 
@@ -2403,7 +2465,7 @@ The Bluetooth responds to AT commands when it disconnects to any slave devices.
 
  
 
-***\*Note: All letters in a command should be capitals!\****
+<span style="color: rgb(255, 76, 65);">Note: All letters in a command should be capitals!</span>
 
  
 
@@ -2411,7 +2473,7 @@ The Bluetooth responds to AT commands when it disconnects to any slave devices.
 
 Create a blank project in Arduino IDE to select the Port: 
 
-![img](./img/wps45.jpg) 
+![img](./en_img/new(50).png)
 
 ------
 
@@ -2419,7 +2481,7 @@ Create a blank project in Arduino IDE to select the Port:
 
 Set baud rate as 9600 (the host is 9600 by default), and input AT to send your command. If the module receives it, OK will be output. 
 
-![img](./img/wps46.jpg) 
+![img](./en_img/new(51).png)
 
 ------
 
@@ -2427,7 +2489,7 @@ Set baud rate as 9600 (the host is 9600 by default), and input AT to send your c
 
 **Query version number:** Input AT+VERSION to display the version number . 
 
-![img](./img/wps47.jpg) 
+![img](./en_img/new(52).png)
 
 ------
 
@@ -2437,7 +2499,7 @@ Set baud rate as 9600 (the host is 9600 by default), and input AT to send your c
 
 **Query BT name:** AT+NAME.
 
-![img](./img/wps48.jpg) 
+![img](./en_img/new(53).png)
 
 ------
 
@@ -2449,7 +2511,7 @@ Set baud rate as 9600 (the host is 9600 by default), and input AT to send your c
 
 **Set baud rate:** Input AT+BAUD7 to set baud rate to 115200. If the module communicates with other devices, their baud rate should also be 115200.
 
-![img](./img/wps49.jpg) 
+![img](./en_img/new(54).png)
 
 ------
 
@@ -2467,9 +2529,9 @@ Set baud rate as 9600 (the host is 9600 by default), and input AT to send your c
 
  
 
-![img](./img/wps50.jpg) 
+![img](./en_img/new(55).png)
 
-For more commands, please refer to [5.6.5](#AT Command Collection)and DX-BT24 data sheet.
+For more commands, please refer to [5.6.5](#AT-Command-Collection)and DX-BT24 data sheet.
 
 ------
 
@@ -2477,35 +2539,48 @@ For more commands, please refer to [5.6.5](#AT Command Collection)and DX-BT24 da
 
 #####  **Operate Slave Devices**
 
-![img](./img/wps51.jpg) 
+![img](./en_img/new(56).png)
 
 **Note: This BT24 module is not included in kits.** 
 
 Keyestudio bt-24 Module RS232/TTL to UART:
-
 https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog-14531-chip-dx-bt24-v51-bluetooth-module-
+
+
 
 Open Arduino IDE and set serial port and baud rate. 
 
 Input AT to test communication. If it is successful, OK will be output.
 
-![img](./img/wps52.jpg) 
+![img](./en_img/new(57).png)
+
+------
+
+
 
 **Query version number:** Input AT+VERSION to output the version number . 
 
-![img](./img/wps53.jpg) 
+![img](./en_img/new(58).png)
+
+------
+
+
 
 **Query BT name:** AT+NAME.
 
 **Revise BT name:** Input AT+NAMEBT24 Slave to revise its name as BT24 Slave.
 
-![img](./img/wps54.jpg) 
+![img](./en_img/new(59).png)
+
+------
+
+
 
 **Query MAC address** (an exclusive command for slave devices): Input AT+LADDR to show MAC address. 
 
 (Hosts connect to slave devices through MAC address.)
 
-![img](./img/wps6.jpg) 
+![img](./en_img/new(60).png) 
 
 ------
 
@@ -2521,36 +2596,36 @@ Keyestudio bt-24 Module RS232/TTL to UART: https://www.keyestudio.com/search/?Ke
 
 Commands for host devices: 
 
-| **NO.** |          **Functions**           |    **Commands**    |                         **Response**                         |                       **Description**                        |
-| :-----: | :------------------------------: | :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|    1    |           Test Command           |         AT         |                              OK                              |                       Test serial port                       |
-|    2    |       Query version number       |     AT+VERSION     |                      +VERSION=<version>                      | <version > : Version numberIt varies from modules and customized demand. |
-|    3    |        Query MAC address         |      AT+LADDR      |                        +LADDR=<laddr>                        |                 <laddr> BT MAC address code                  |
-|    4    |          Query BT name           |      AT+NAME       |                         +NAME=<name>                         |    <name>: BT name, maximum of 28 bytesDefault name: BT24    |
-|    5    |           Set BT name            |   AT+NAME<name>    |                        +NAME=<name>OK                        |                                                              |
-|    6    |    Query serial port stop bit    |      AT+STOP       |                        +STOP=<param>                         | < param>: Serial number0：1 Stop bit1：2 Stop bitDefault value：0 |
-|    7    |     Set serial port stop bit     |   AT+STOP<param>   |                       +STOP=<param>OK                        |                                                              |
-|    8    |    Queryserial portcheck bit     |      AT+PARI       |                        +PARI=<param>                         | < param>: Serial number0: None check 1: Odd check 2: Even check |
-|    9    |    Set serial port check bit     |      AT+PARI       |                       +PARI=<param>OK                        |                                                              |
-|   10    |         Query baud rate          |      AT+BAUD       |                         +BAUD=<baud>                         | <baud>: Baud rate serial number1: 2400   5: 384002: 4800   6: 576003: 9600   7: 1152004: 19200Default value: 3 (9600) |
-|   11    |          Set baud rate           |   AT+BAUD<baud>    |                        +BAUD=<baud>OK                        |                                                              |
-|   12    |       Query searching mode       |      AT+MODE       |                        + MODE<Param>                         | <param>: (0、1、2、3)0: Normal mode1: Manufacturer informationfilter mode 2: pairing mode3: IBEACON information obtaining modeDefault value：0 |
-|   13    |        Set searching mode        |   AT+MODE<Param>   |                        +MODE<Parm>OK                         |                                                              |
-|   14    |            Disconnect            |      AT+DISC       |                                                              |                                                              |
-|   15    |              Reset               |      AT+RESET      |                       +RESETOKPower On                       |                                                              |
-|   16    |     Restore factory settings     |     AT+DEFAULT     |                      +DEFAULTOKPower On                      |                                                              |
-|   17    | Query filtering signal intensity |    AT+SCANRSSI     |                       +SCANRSSI<rssi>                        | <rssi>: signal intensity1-100 (decimal system)Default value: 100 |
-|   18    |  Set filtering signal intensity  | AT+SCANRSSI<rssi>  |                              OK                              |                                                              |
-|   19    |       Query searching time       |     AT+TIMEINQ     |                        +TIMEINQ<time>                        |         <time>: time(1-200) *100msDefault value: 10          |
-|   20    |        Set searching time        |  AT+TIMEINQ<time>  |                              OK                              |                                                              |
-|   21    |       Connect to Bluetooth       |   AT+CONN<param>   |             +Connecting>><mac>+Connected>><mac>              |          <param>: serial number<mac>: address code           |
-|   22    |       Search for Bluetooth       |       AT+INQ       | OK+INQS+INQ:<param>,<mac>,<rssi>,<name>+INQ:<param>,<mac>,<rssi>,<name>…+INQEDevices Found <x> | <param>: serial number<mac>: address code: <rssi>: signal value<name>: set name<x>: quantity (max: 8) |
-|   23    |       Connect to Bluetooth       |    AT+CONA<mac>    |             +Connecting>><mac>+Connected>><mac>              |                     <mac>: address code                      |
-|   24    | Query binding Bluetooth address  |      AT+BIND       |                          +BAND<mac>                          |                     <mac>: address code                      |
-|   25    |  Set binding Bluetooth address   |    AT+BIND<mac>    |                              OK                              |                                                              |
-|   26    |      Query connection mode       |    AT+AUTOCONN     |                       +AUTOCONN<param>                       | <param>: (0 or 1)0：Disconnected1：ConnectedDefault Value: 0 |
-|   27    |       Set connection mode        | AT+AUTOCONN<param> |                              OK                              |                                                              |
-|   28    |     Clear connection history     |      AT+CLEAR      |                              OK                              |                                                              |
+| **NO.** |          **Functions**           |    **Commands**     |                         **Response**                         |                       **Description**                        |
+| :-----: | :------------------------------: | :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    1    |           Test Command           |         AT          |                              OK                              |                       Test serial port                       |
+|    2    |       Query version number       |     AT+VERSION      |                     +VERSION=\<version>                      | \<version > : Version numberIt varies from modules and customized demand. |
+|    3    |        Query MAC address         |      AT+LADDR       |                       +LADDR=\<laddr>                        |                 \<laddr> BT MAC address code                 |
+|    4    |          Query BT name           |       AT+NAME       |                        +NAME=\<name>                         |   \<name>: BT name, maximum of 28 bytesDefault name: BT24    |
+|    5    |           Set BT name            |   AT+NAME\<name>    |                       +NAME=\<name>OK                        |                                                              |
+|    6    |    Query serial port stop bit    |       AT+STOP       |                        +STOP=\<param>                        | \<param>: Serial number0：1 Stop bit1：2 Stop bitDefault value：0 |
+|    7    |     Set serial port stop bit     |   AT+STOP\<param>   |                       +STOP=\<param>OK                       |                                                              |
+|    8    |    Queryserial portcheck bit     |       AT+PARI       |                        +PARI=\<param>                        | \<param>: Serial number0: None check 1: Odd check 2: Even check |
+|    9    |    Set serial port check bit     |       AT+PARI       |                       +PARI=\<param>OK                       |                                                              |
+|   10    |         Query baud rate          |       AT+BAUD       |                        +BAUD=\<baud>                         | \<baud>: Baud rate serial number1: 2400   5: 384002: 4800   6: 576003: 9600   7: 1152004: 19200Default value: 3 (9600) |
+|   11    |          Set baud rate           |   AT+BAUD\<baud>    |                       +BAUD=\<baud>OK                        |                                                              |
+|   12    |       Query searching mode       |       AT+MODE       |                        + MODE\<Param>                        | \<param>: (0、1、2、3)0: Normal mode1: Manufacturer informationfilter mode 2: pairing mode3: IBEACON information obtaining modeDefault value：0 |
+|   13    |        Set searching mode        |   AT+MODE\<Param>   |                        +MODE\<Parm>OK                        |                                                              |
+|   14    |            Disconnect            |       AT+DISC       |                                                              |                                                              |
+|   15    |              Reset               |      AT+RESET       |                       +RESETOKPower On                       |                                                              |
+|   16    |     Restore factory settings     |     AT+DEFAULT      |                      +DEFAULTOKPower On                      |                                                              |
+|   17    | Query filtering signal intensity |     AT+SCANRSSI     |                       +SCANRSSI\<rssi>                       | \<rssi>: signal intensity1-100 (decimal system)Default value: 100 |
+|   18    |  Set filtering signal intensity  | AT+SCANRSSI\<rssi>  |                              OK                              |                                                              |
+|   19    |       Query searching time       |     AT+TIMEINQ      |                       +TIMEINQ\<time>                        |         \<time>: time(1-200) *100msDefault value: 10         |
+|   20    |        Set searching time        |  AT+TIMEINQ\<time>  |                              OK                              |                                                              |
+|   21    |       Connect to Bluetooth       |   AT+CONN\<param>   |            +Connecting>>\<mac>+Connected>>\<mac>             |         \<param>: serial number\<mac>: address code          |
+|   22    |       Search for Bluetooth       |       AT+INQ        | OK+INQS+INQ:\<param>,\<mac>,\<rssi>,\<name>+INQ:\<param>,\<mac>,\<rssi>,\<name>…+INQEDevices Found \<x> | \<param>: serial number\<mac>: address code: \<rssi>: signal value\<name>: set name\<x>: quantity (max: 8) |
+|   23    |       Connect to Bluetooth       |    AT+CONA\<mac>    |            +Connecting>>\<mac>+Connected>>\<mac>             |                     \<mac>: address code                     |
+|   24    | Query binding Bluetooth address  |       AT+BIND       |                         +BAND\<mac>                          |                     \<mac>: address code                     |
+|   25    |  Set binding Bluetooth address   |    AT+BIND\<mac>    |                              OK                              |                                                              |
+|   26    |      Query connection mode       |     AT+AUTOCONN     |                      +AUTOCONN\<param>                       | \<param>: (0 or 1)0：Disconnected,1：Connected,Default Value: 0 |
+|   27    |       Set connection mode        | AT+AUTOCONN\<param> |                              OK                              |                                                              |
+|   28    |     Clear connection history     |      AT+CLEAR       |                              OK                              |                                                              |
 
  
 
@@ -2571,15 +2646,15 @@ Error code:
 
 Upload AT command to pair host with slave device. The two Bluetooth will connect automatically after being set and powering on. 
 
-Step 1. 
+------
 
+Step 1. 
 Set baud rate of the host and slave to the same as AT command (Set host first, and here we set baud rate to 115200). Press RESET button. 
 
 Command 1: **AT+BAUD7**
+		Command 2: **AT+RESET**
 
-Command 2: **AT+RESET**
-
-![img](./img/wps56.jpg) 
+![img](./en_img/new(61).png) 
 
  
 
@@ -2588,14 +2663,13 @@ Command 2: **AT+RESET**
 
 
 Step 2. 
-
 Set host mode to MODE 2. Send AT+MODE and AT+AUTOCONN1.
 
-![img](./img/wps57.jpg) 
+![img](./en_img/new(62).png) 
 
  
 
-![img](./img/wps58.jpg) 
+![img](./en_img/new(63).png) 
 
  
 
@@ -2604,12 +2678,10 @@ Set host mode to MODE 2. Send AT+MODE and AT+AUTOCONN1.
 
 
 Step 3. 
-
 Input AT+SEADV534d4152542d00 to enter slave pairing mode. 
-
 Input AT+CLEARADV to exit. 
 
-![img](./img/wps59.jpg) 
+![img](./en_img/new(64).png)  
 
  
 
@@ -2618,14 +2690,13 @@ Input AT+CLEARADV to exit.
 
 
 Step 4. 
-
 Power up two modules, and the host binds itself to the address code of the slave, and it will keep connection even in an outage. 
 
 Send AT+CLEAR or press a certain button to remove binding.
 
 After connection, LED on the host will light up, while that on the slave will blink per 3s.
 
-![img](./img/wps75.jpg) 
+![img](./en_img/new(65).png) 
 
 ------
 
@@ -2634,10 +2705,8 @@ After connection, LED on the host will light up, while that on the slave will bl
 ####  **Communication of Host and Slave Device**
 
 Step 1. 
-
 Install host Bluetooth on the expansion board, and burn the test code on Arduino NANO.
-
-**Note: Please keep the Bluetooth disconnected when uploading code.** 
+<span style="color: rgb(255, 76, 65);">Note: Please keep the Bluetooth disconnected when uploading code.</span>
 
  
 
@@ -2675,7 +2744,7 @@ Step 2.
 
 Connect Bluetooth with computer via USB-to-serial port module. Select the serial number and set baud rate to 115200, and the slave receives messages and serial port alternately prints“A”and“B”per 0.5s. 
 
-![img](./img/wps61.jpg) 
+![img](./en_img/new(66).png)  
 
  
 
@@ -2691,15 +2760,17 @@ For complete installation, please refer to: [Attachment: Installation Steps](#_�
 
 Mecanum cars: https://www.keyestudio.com/search/?Keyword=mecanum
 
-![img](./img/wps62.jpg) 
+![img](./en_img/new(67).png)  
 
 ------
+
+
 
 This glove controls not only Mecanum cars but also mini tanks, smart homing cars and Beetlebot cars. 
 
 Other mini cars: https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 
-![img](./img/wps63.jpg) 
+![img](./en_img/new(68).png)  
 
 ------
 
@@ -2708,8 +2779,7 @@ Other mini cars: https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 ####  **Angles of the Glove**
 
 A null shift may occur on Yaw if the glove only equipped with MPU6050, hence we only snatch the data of Roll and Pitch. 
-
-***\*If you need full data, please install a magnetometer for calibration.\**** 
+<span style="color: rgb(255, 76, 65);">If you need full data, please install a magnetometer for calibration.</span>
 
 Y-axis: Fingers face forward and the palm rolls from side to side.
 
@@ -2719,11 +2789,13 @@ Y-axis: Fingers face forward and the palm rolls from side to side.
 
 +180°: Roll down your hand to the right.
 
-![img](./img/wps64.jpg) 
+![img](./en_img/new(69).png) 
 
  
 
 ------
+
+
 
 X-axis: Fingers face forward and the hand moves up and down centered as the palm.
 
@@ -2733,7 +2805,7 @@ X-axis: Fingers face forward and the hand moves up and down centered as the palm
 
 +180°: Move downwards your hand.
 
-![img](./img/wps65.jpg) 
+![img](./en_img/new(70).png)  
 
 ------
 
@@ -2749,11 +2821,11 @@ Set a range of gesture angles as follows (or at your will). When your gesture re
 4. Hold upwards: 20~90° in axis X
 5. Hold downwards: -20~-90° in axis X
 
-***\*Note: Please keep the Bluetooth disconnected when uploading code.\****
+<span style="color: rgb(255, 76, 65);">Note: Please keep the Bluetooth disconnected when uploading code.</span>
 
 Open serial port after burning the code, and the gesture data is displayed.
 
-![img](./img/wps66.jpg) 
+![img](./en_img/new(71).png)  
 
  
 
@@ -3262,13 +3334,15 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 ####  **Car Operation Code**
 
-![img](./img/wps67.jpg) 
+![img](./en_img/new(72).png)   
 
 ------
 
+
+
 Mecanum Cars support omnidirectional movements, including forward, transverse, oblique, rotary and even their combination. 
 
-![img](./img/wps68.jpg) 
+![img](./en_img/new(73).png)   
 
 Mecanum Cars: https://www.keyestudio.com/search/?Keyword=mecanum
 
@@ -3280,13 +3354,15 @@ Four wheels have their private motors, so that the car is flexible in its multi-
 
  
 
-![img](./img/wps69.jpg) 
+![img](./en_img/new(74).png)   
 
  
 
 Pair the glove with Bluetooth on the car. Connect host and slave Bluetooth by AT commands (the glove is the host, and the car is the slave).
 
 ------
+
+
 
 AT commands for the host: 
 
@@ -3301,22 +3377,25 @@ AT commands for the host:
 
 ------
 
+
+
 AT commands for the slave: 
 
 - AT command 1：***\*AT+SEADV534d4152542d00\**** : Set the slave device to Pairing Mode, and it connects automatically when powering on. 
 
+For detailed steps, please refer to [5.6.6 Connect-Host-to-Slave-Devices](#Connect-Host-to-Slave-Devices).
 
 ------
 
-For detailed steps, please refer to [5.6.6](#Connect Host to Slave Devices).
 
- 
 
 Define the corresponding functions of different gestures. 
 
 Two buttons are reserved on the expansion board, which are used to alter the function control of the mini car. 
 
 ------
+
+
 
 ***\*Host device definitions:\**** 
 
@@ -3360,9 +3439,10 @@ Gesture Three:
 - Press D7 to light the colorful LED and press again to turn it off. 
 
   - Code: Serial.print("t")；// Light on	
-
-
-  - Code: Serial.print("u")；// Light off
+  
+  
+    - Code: Serial.print("u")；// Light off
+  
 
 
 
@@ -3370,9 +3450,10 @@ Gesture Three:
 - Press D8 to light the RGB LED and press again to douse it.
 
   - Code: Serial.print("m")；// Light on
-
-
-  - Code: Serial.print("o")；// Light off
+  
+  
+    - Code: Serial.print("o")；// Light off
+  
 
 
 
@@ -3416,6 +3497,8 @@ Slave device interfaces:
  
 
 Please refer to the folder lesson_4_2.
+
+
 
 ***\*Code:\**** 
 
@@ -4039,13 +4122,13 @@ https://www.arduino.cc/
 
 |   Step    |         Diagram         |                         Description                          |
 | :-------: | :---------------------: | :----------------------------------------------------------: |
-| **Step1** | ![img](./img/wps76.jpg) |               The kit list excludes 9V battery               |
-| **Step2** | ![img](./img/wps77.jpg) | Connect Arduino NANO mainboard to the expansion board according to the array on it. Install BT module on the expansion board as follows: |
-| **Step3** | ![img](./img/wps78.jpg) |           (GND--GND) (VCC--VCC) (TX--RX) (RX--TX)            |
-| **Step4** | ![img](./img/wps79.jpg) |  Install MPU6050 module on the expansion boardas follows：   |
-| **Step5** | ![img](./img/wps80.jpg) |          (GND--GND) (VCC--VCC) (SDA--SDA)(SCL--SCL)          |
-| **Step6** | ![img](./img/wps81.jpg) | Uncover the double-side adhesive foam tape behind the board and stick it to the back of one glove. Press to keep it steady. |
-| **Step7** | ![img](./img/wps82.jpg) |                  Installation is complete.                   |
+| **Step1** | ![img](./en_img/new(75).png)   |               The kit list excludes 9V battery               |
+| **Step2** | ![img](./en_img/new(76).png)   | Connect Arduino NANO mainboard to the expansion board according to the array on it. Install BT module on the expansion board as follows: |
+| **Step3** | ![img](./en_img/new(77).png)   |           (GND--GND) (VCC--VCC) (TX--RX) (RX--TX)            |
+| **Step4** | ![img](./en_img/new(78).png)   |  Install MPU6050 module on the expansion boardas follows：   |
+| **Step5** | ![img](./en_img/new(79).png)   |          (GND--GND) (VCC--VCC) (SDA--SDA)(SCL--SCL)          |
+| **Step6** | ![img](./en_img/new(80).png)   | Uncover the double-side adhesive foam tape behind the board and stick it to the back of one glove. Press to keep it steady. |
+| **Step7** | ![img](./en_img/new(81).png) |                  Installation is complete.                   |
 
 ------
 
