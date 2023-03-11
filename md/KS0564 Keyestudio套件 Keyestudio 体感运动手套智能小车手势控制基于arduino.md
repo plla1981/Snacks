@@ -193,7 +193,7 @@ keyestudio商标和徽标是KEYES DIY ROBOT co.,LTD的版权,任何人和公司�
 
 万事俱备，现在我们正式进入体感运动手套的教程。来感受代码操作硬件的乐趣。
 
-**注意：扩展板上标注的G、GND表示电源负极，可连接传感器的G、GND、—等负极接口；标注的V、VCC为电源正极（此扩展板上的电源为5V），可连接传感器的V、VCC、+ 等5V电源接口。**
+<span style="color: rgb(255, 0, 0);">注意：扩展板上标注的G、GND表示电源负极，可连接传感器的G、GND、—等负极接口；标注的V、VCC为电源正极（此扩展板上的电源为5V），可连接传感器的V、VCC、+ 等5V电源接口。</span>
 
 ------
 
@@ -209,9 +209,15 @@ keyestudio商标和徽标是KEYES DIY ROBOT co.,LTD的版权,任何人和公司�
 
 ------
 
+
+
 Arduino 软件有很多版本，有wodows,mac linux系统的（如下图），而且还有过去老的版本，你只需要下载一个适合系统的版本即可。
 
 ![img](zh_img/new(9).png)
+
+------
+
+
 
 这里我们以Windows系统的为例给大家介绍下载和安装的步骤。Windows系统的也有两个版本，一个版本是安装版的，一个是下载版的不用安装，直接下载文件到电脑，解压缩就可以用了。
 
@@ -274,21 +280,41 @@ Keyestudio NANO PLUS的处理器核心是ATMEGA328P-AU。和官网的ARDUINO NAN
 
 ![img](zh_img/new(14).png)
 
+------
+
+
+
 点击USB Serial后，点击“更新驱动程序”，开始安装驱动，如下图。
 
 ![img](zh_img/new(15).png)
+
+------
+
+
 
 进入下图，选择浏览我的电脑以查找驱动程序。
 
 ![img](zh_img/new(16).png)
 
+------
+
+
+
 在电脑中找到usb_ch341_3.1.2009.06文件夹。
 
 ![img](zh_img/new(17).png)
 
+------
+
+
+
 安装驱动完成，出现下图点击关闭，之后就会出现串口号了。
 
 ![img](zh_img/new(18).png)
+
+------
+
+
 
 这样驱动就装好了。点击计算机--属性--设备管理器，我们可看见如下图。
 
@@ -304,11 +330,17 @@ Keyestudio NANO PLUS的处理器核心是ATMEGA328P-AU。和官网的ARDUINO NAN
 
 ![img](zh_img/new(20).png)
 
+------
+
 
 
 选择正确的Arduino板，与连接到计算机的电路板相匹配。转到Tools→Board，选择Arduino NANO。
 
 ![img](zh_img/new(21).png)
+
+------
+
+
 
 然后再选择正确的COM口（安装驱动成功后，可看到对应COM口），这样就算连接成功了。
 
@@ -324,9 +356,17 @@ Keyestudio NANO PLUS的处理器核心是ATMEGA328P-AU。和官网的ARDUINO NAN
 
 ![img](zh_img/new(23).png)
 
+------
+
+
+
 按照前面方法设置板和COM口，IDE右下角显示对应板和COM口。点击左上角的“√”图标开始编译程序，检查错误，也可以点击“→”一键编译并上传到开发板。
 
 ![img](zh_img/new(24).png)
+
+------
+
+
 
 上传成功如下图。
 
@@ -359,6 +399,10 @@ Keyestudio NANO PLUS的处理器核心是ATMEGA328P-AU。和官网的ARDUINO NAN
 
 ![img](zh_img/new(26).png)
 
+------
+
+
+
 再选择文件中，找到自己需要的库压缩包.zip格式，点击确定即可添加成功，添加成功后消息栏会显示“Library installed”。
 
 ![img](zh_img/new(27).png)
@@ -374,6 +418,10 @@ Keyestudio NANO PLUS的处理器核心是ATMEGA328P-AU。和官网的ARDUINO NAN
 该体感运动手套扩展板基于ArduinoNANO开发，可安装9V电池，独立供电，不需要外接电源；板上配有常用的UART和I2C通信接口，以及两个按钮（D7，D8），ArduinoNANO的其他引脚也全部通过排针引出，可外接传感器。在扩展板上安装MPU6050模块和BT24蓝牙模块，即可组装成完整的体感运动手套。
 
 ![img](zh_img/new(28).png)
+
+------
+
+
 
 该原理图如下：
 
@@ -398,6 +446,10 @@ MPU6050内部集成了一个16位ADC，它可以同时读取6轴的数据，从�
 此外，MPU6050还集成了一个快速的DMP（Digital Motion Processor），可以帮助处理陀螺仪和加速度计的原始数据，从而获取物体的运动状态。
 
 ![img](zh_img/new(30).png)
+
+------
+
+
 
 典型电路图为：
 
@@ -469,6 +521,8 @@ I2C通信协议是Inter-Integrated Circuit（IIC）的缩写，也叫作两线�
 ![img](zh_img/new(33).png)
 
 ------
+
+
 
 I2C总线具有两根线，分别为SCL（Serial Clock）和SDA（Serial Data），SCL线负责时钟信号，SDA线负责数据传输。在I2C总线中，只有主机可以控制时钟信号，节点只能接受时钟信号，主机控制所有的数据传输，从机只能接受数据。
 
@@ -1005,6 +1059,10 @@ void loop()
 }
 ```
 
+------
+
+
+
 显示效果：转换成实际温度值。
 
 ![img](zh_img/new(40).png)
@@ -1052,7 +1110,7 @@ MPU6050 可以用来测量物体的姿态。可以提供三个角度的测量：
 
 在获取偏航角（Yaw)时，由于MPU6050内部的陀螺仪会自动校准，它会自动把自己的角度设置为零度，这会导致偏航角（Yaw)零飘。零飘是指检测到的数据会发生偶然的小波动，比如传感器的值会自动发生偶然的小变化。即使是经过优良的算法后，依然会产生零飘，这受限于硬件，解决方式：添加磁力计来校准MPU6050。
 
-***所以在以下教学和应用中，我们主要使用翻滚角（Roll）和俯仰角（Pitch）作为主要内容。***
+<span style="color: rgb(255, 0, 0);">所以在以下教学和应用中，我们主要使用翻滚角（Roll）和俯仰角（Pitch）作为主要内容。</span>
 
 ------
 
@@ -1076,11 +1134,10 @@ MPU6050 可以用来测量物体的姿态。可以提供三个角度的测量：
 高效定位滤波器使用下面的公式来估计姿态：
 
 
-$$
- (Δφ = qt * qt-1)
-$$
 
-
+$$
+(Δφ = qt * qt-1)
+$$
 
 
 $$
@@ -1125,6 +1182,8 @@ $$
 
 ***比如我们设置量程为±2g，那么通过ADC采集电压的值来输出加速度值，而数据寄存器是16位且最高一位为符号位，即ADC读取的值位±32768对应±2g，1g对应的ADC值为+32768/2，即16384LSB/g为数据分辨率同样可得±4g，数据分辨率为+32768/4=8192LSB/g。***
 
+
+
 **代码如下：**
 
 ```c++
@@ -1161,6 +1220,8 @@ $$
 
 ***ADC输出范围为±32768，比如我们选中测量范围为±2000°/s，ADC读取的原始值为300，数据分辨率就是32768/2000=16.384LSB/(°/s)，那么转换为角速度就是300/16.384=18.3105(°/s)。***
 
+
+
 **代码如下：**
 
 ```c++
@@ -1185,6 +1246,8 @@ gyroz = (float)gyroCount[2] * gRes;
 ##### **计算积分**
 
 获取时间，用于计算积分区间，用于转换成四元数。
+
+
 
 **代码如下：**
 
@@ -1215,6 +1278,8 @@ gyroz = (float)gyroCount[2] * gRes;
 #####  **将六轴数据转换成四元数**
 
 将加速度计数据和陀螺仪数据进行四元数的转换，陀螺仪每个轴的数据，都需要转换成弧度，再进行转换，其中gyrox * PI / 180.0f表示将gyrox的角度转换为弧度。因为弧度是一个角度的度量，而角度是一个弧度的度量，所以根据比例关系，gyrox * PI / 180.0f就是将gyrox的角度转换为弧度。
+
+
 
 **代码如下：**
 
@@ -2221,7 +2286,7 @@ AT指令是计算机通过串口与蓝牙设备进行交互的一种文本型命
 
 #### **接线图**
 
-我们使用USB转串口模块，与蓝牙模块进行通信，实现对蓝牙的AT命令控制。***\*注意：主机模块和从机模块的安装方法一致。\****
+我们使用USB转串口模块，与蓝牙模块进行通信，实现对蓝牙的AT命令控制。<span style="color: rgb(255, 0, 0);">注意：主机模块和从机模块的安装方法一致。</span>
 
 此处我使用的是本公司的USB转串口模块Keyestudio FTDI(original chips) Basic Program。
 
@@ -2255,6 +2320,8 @@ USB转串口模块链接：https://www.keyestudio.com/search/?Keyword=ks0277
  
 
 ------
+
+
 
 设置波特率为9600（蓝牙主机模块默认为9600），在输入框输入AT，然后回车发送命令，此时，如果蓝牙模块接收到了命令，会返回OK，说明你的命令已经可以被他接收了。
 
@@ -2308,7 +2375,7 @@ USB转串口模块链接：https://www.keyestudio.com/search/?Keyword=ks0277
 
  
 
-更多命令介绍，请查看5.5.5的AT指令集，和附带的DX-BT24系列数据手册。
+更多命令介绍，请查看[5.6.5](#AT指令集)的AT指令集，和附带的DX-BT24系列数据手册。
 
 ------
 
@@ -2316,7 +2383,7 @@ USB转串口模块链接：https://www.keyestudio.com/search/?Keyword=ks0277
 
 #####  **控制从机**
 
-![img](zh_img/new(55).png)
+![img](zh_img/new(56).png)
 
  
 
@@ -2332,7 +2399,7 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 我们按照主机的操作方式，打开ArduinoIDE，选定串口和波特率，发送AT来进行通信测试，成功则返回OK。
 
-![img](zh_img/new(56).png)
+![img](zh_img/new(57).png)
 
 ------
 
@@ -2340,7 +2407,7 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 **AT指令：查询版本号**。在ArduinoIDE输入框输入AT+VERSION，会回应蓝牙模块软件版本号。
 
-![img](zh_img/new(57).png)
+![img](zh_img/new(58).png)
 
 ------
 
@@ -2350,7 +2417,7 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 更改从蓝牙名称，例如：输入AT+NAMEBT24 Slave，把蓝牙名称改为BT24 Slave。
 
-![img](zh_img/new(58).png)
+![img](zh_img/new(59).png)
 
 ------
 
@@ -2358,7 +2425,7 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 **AT指令：查询设备MAC地址（只有从设备有此AT指令）**。在输入框输入AT+LADDR，即可返回设备的MAC地址，主机想要和从机连接时，正是用此地址来连接从机。
 
-![img](zh_img/new(59).png)
+![img](zh_img/new(60).png)
 
 ------
 
@@ -2372,36 +2439,36 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 ***\*注意：只有主机蓝牙模块才能查询和设置模式（MODE），只有从机蓝牙模块才能查询MAC地址。设置完指令后需重启蓝牙模块以生效，以下为主机AT指令集。\****
 
-| 编号 |       功能       |        指令        |                             响应                             |                             说明                             |
-| :--: | :--------------: | :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|  1   |     测试指令     |         AT         |                              OK                              |                         用于测试串口                         |
-|  2   |    查询版本号    |     AT+VERSION     |                      +VERSION=<version>                      |   <version >软件版本号依据不同的模块与定制需求版本会有区别   |
-|  3   |  查询 MAC 地址   |      AT+LADDR      |                        +LADDR=<laddr>                        |                    <laddr>蓝牙 MAC 地址码                    |
-|  4   |    查询蓝牙名    |      AT+NAME       |                         +NAME=<name>                         |         <name>蓝牙名，最长为 28 个字节默认名称：BT24         |
-|  5   |    设置蓝牙名    |   AT+NAME<name>    |                        +NAME=<name>OK                        |                                                              |
-|  6   |  查询串口停止位  |      AT+STOP       |                        +STOP=<param>                         |         < param>序号0：1 停止位1：2 停止位,默认值：0         |
-|  7   |  设置串口停止位  |   AT+STOP<param>   |                       +STOP=<param>OK                        |                                                              |
-|  8   |  查询串口校验位  |      AT+PARI       |                        +PARI=<param>                         |          < param>序号0：无校验 1：奇校验 2：偶校验           |
-|  9   |  设置串口校验位  |      AT+PARI       |                  +PARI=<param>查询波特率OK                   |                                                              |
-|  10  |    查询波特率    |      AT+BAUD       |                         +BAUD=<baud>                         | <baud>波特率对应序号1:24005: 384002:48006: 576003:96007:1152004: 19200 默认值：3(9600) |
-|  11  |    设置波特率    |   AT+BAUD<baud>    |                        +BAUD=<baud>OK                        |                                                              |
-|  12  | 查询模块搜索模式 |      AT+MODE       |                        + MODE<Param>                         | <param>(0、1、2、3)0：普通模式1：过滤厂商信息2：配对模式3：获取 IBEACON 信息模式,默认值：0 |
-|  13  | 设置模块搜索模式 |   AT+MODE<Param>   |                       + MODE<Param>OK                        |                                                              |
-|  14  |     断开连接     |      AT+DISC       |                                                              |                                                              |
-|  15  |     软件重启     |      AT+RESET      |                       +RESETOKPower On                       |                                                              |
-|  16  |   恢复出厂设置   |     AT+DEFAULT     |                      +DEFAULTOKPower On                      |                                                              |
-|  17  | 查询过滤信号强度 |    AT+SCANRSSI     |                       +SCANRSSI<rssi>                        |           <rssi>信号强度 1-100(十进制),默认值：100           |
-|  18  | 设置过滤信号强度 | AT+SCANRSSI<rssi>  |                              OK                              |                                                              |
-|  19  | 查询搜索时间长度 |     AT+TIMEINQ     |                        +TIMEINQ<time>                        |             <time>时间(1-200) *100ms,默认值：10              |
-|  20  | 设置搜索时间长度 |  AT+TIMEINQ<time>  |                              OK                              |                                                              |
-|  21  |   连接蓝牙设备   |   AT+CONN<param>   |             +Connecting>><mac>+Connected>><mac>              |                    <param>序号<mac>地址码                    |
-|  22  |   搜索蓝牙设备   |       AT+INQ       | OK+INQS+INQ:<param>,<mac>,<rssi>,<name>+INQ:<param>,<mac>,<rssi>,<name>……+INQEDevices Found <x> | <param>序号<mac>地址码<rssi>信号值<name>设置名称<x>个数(最大为 8) |
-|  23  |   连接蓝牙设备   |    AT+CONA<mac>    |             +Connecting>><mac>+Connected>><mac>              |                         <mac>地址码                          |
-|  24  | 查询绑定蓝牙地址 |      AT+BIND       |                          +BAND<mac>                          |                         <mac>地址码                          |
-|  25  | 设置绑定蓝牙地址 |    AT+BIND<mac>    |                              OK                              |                                                              |
-|  26  | 查询模块连接模式 |    AT+AUTOCONN     |                       +AUTOCONN<param>                       |            <param>(0、1)0：关闭1：打开,默认值：0             |
-|  27  | 设置模块连接模式 | AT+AUTOCONN<param> |                              OK                              |                                                              |
-|  28  |   清除连接记忆   |      AT+CLEAR      |                              OK                              |                                                              |
+| 编号 |       功能       |        指令         |                             响应                             |                             说明                             |
+| :--: | :--------------: | :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   |     测试指令     |         AT          |                              OK                              |                         用于测试串口                         |
+|  2   |    查询版本号    |     AT+VERSION      |                     +VERSION=\<version>                      |  \<version >软件版本号依据不同的模块与定制需求版本会有区别   |
+|  3   |  查询 MAC 地址   |      AT+LADDR       |                       +LADDR=\<laddr>                        |                   \<laddr>蓝牙 MAC 地址码                    |
+|  4   |    查询蓝牙名    |       AT+NAME       |                        +NAME=\<name>                         |        \<name>蓝牙名，最长为 28 个字节默认名称：BT24         |
+|  5   |    设置蓝牙名    |   AT+NAME\<name>    |                       +NAME=\<name>OK                        |                                                              |
+|  6   |  查询串口停止位  |       AT+STOP       |                        +STOP=\<param>                        |         \<param>序号0：1 停止位1：2 停止位,默认值：0         |
+|  7   |  设置串口停止位  |   AT+STOP\<param>   |                       +STOP=\<param>OK                       |                                                              |
+|  8   |  查询串口校验位  |       AT+PARI       |                        +PARI=\<param>                        |          \<param>序号0：无校验 1：奇校验 2：偶校验           |
+|  9   |  设置串口校验位  |       AT+PARI       |                  +PARI=\<param>查询波特率OK                  |                                                              |
+|  10  |    查询波特率    |       AT+BAUD       |                        +BAUD=\<baud>                         | \<baud>波特率对应序号1:24005: 384002:48006: 576003:96007:1152004: 19200 默认值：3(9600) |
+|  11  |    设置波特率    |   AT+BAUD\<baud>    |                       +BAUD=\<baud>OK                        |                                                              |
+|  12  | 查询模块搜索模式 |       AT+MODE       |                        + MODE\<Param>                        | \<param>(0、1、2、3)0：普通模式1：过滤厂商信息2：配对模式3：获取 IBEACON 信息模式,默认值：0 |
+|  13  | 设置模块搜索模式 |   AT+MODE\<Param>   |                       + MODE\<Param>OK                       |                                                              |
+|  14  |     断开连接     |       AT+DISC       |                                                              |                                                              |
+|  15  |     软件重启     |      AT+RESET       |                       +RESETOKPower On                       |                                                              |
+|  16  |   恢复出厂设置   |     AT+DEFAULT      |                      +DEFAULTOKPower On                      |                                                              |
+|  17  | 查询过滤信号强度 |     AT+SCANRSSI     |                       +SCANRSSI\<rssi>                       |          < rssi>信号强度 1-100(十进制),默认值：100           |
+|  18  | 设置过滤信号强度 | AT+SCANRSSI\<rssi>  |                              OK                              |                                                              |
+|  19  | 查询搜索时间长度 |     AT+TIMEINQ      |                       +TIMEINQ\<time>                        |             \<time>时间(1-200) *100ms,默认值：10             |
+|  20  | 设置搜索时间长度 |  AT+TIMEINQ\<time>  |                              OK                              |                                                              |
+|  21  |   连接蓝牙设备   |   AT+CONN\<param>   |            +Connecting>>\<mac>+Connected>>\<mac>             |                   \<param>序号\<mac>地址码                   |
+|  22  |   搜索蓝牙设备   |       AT+INQ        | OK+INQS+INQ:\<param>,\<mac>,\<rssi>,\<name>+INQ:\<param>,\<mac>,\<rssi>,\<name>……+INQEDevices Found \<x> | \<param>序号\<mac>地址码\<rssi>信号值\<name>设置名称\<x>个数(最大为 8) |
+|  23  |   连接蓝牙设备   |    AT+CONA\<mac>    |            +Connecting>>\<mac>+Connected>>\<mac>             |                         \<mac>地址码                         |
+|  24  | 查询绑定蓝牙地址 |       AT+BIND       |                         +BAND\<mac>                          |                         \<mac>地址码                         |
+|  25  | 设置绑定蓝牙地址 |    AT+BIND\<mac>    |                              OK                              |                                                              |
+|  26  | 查询模块连接模式 |     AT+AUTOCONN     |                      +AUTOCONN\<param>                       |            \<param>(0、1)0：关闭1：打开,默认值：0            |
+|  27  | 设置模块连接模式 | AT+AUTOCONN\<param> |                              OK                              |                                                              |
+|  28  |   清除连接记忆   |      AT+CLEAR       |                              OK                              |                                                              |
 
 ------
 
@@ -2420,8 +2487,6 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 #### **蓝牙主机连接从机**
 
-![img](zh_img/new(60).png)
-
 蓝牙主机与蓝牙从机设备之间的配对，需要AT指令进行连接，两个蓝牙设置好后，上电即可自动连接。
 
 ------
@@ -2430,7 +2495,9 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 
 1. 蓝牙主机和从机设备都需要设置相同的波特率。设置主机与从机设备的波特率AT指令一致，先设置好主设备，再设置从设备（此处将两个设备设置的波特率为115200，蓝牙模块默认为9600），然后使用RESET将蓝牙设备重启。
 
-​	AT指令1：***\*AT+BAUD7\****，AT指令2：***\*AT+RESET\****
+​	AT指令1：**AT+BAUD7**
+
+​	AT指令2：**AT+RESET**
 
 ![img](zh_img/new(61).png)
 
@@ -2465,6 +2532,8 @@ https://www.keyestudio.com/products/keyestudio-wireless-data-transmission-dailog
 4. 把主机和从机两个蓝牙模块上电，主机模块会连接上从模块，主模块将对从模块蓝牙地址码进行绑定，即使掉电或者断开后，主模块还会自动连接该从模块。
 
 ​	如需清除绑定，发送**AT+CLEAR**或者使用按键进行清除。
+
+![img](zh_img/new(65).png)
 
 ​	两个主从蓝牙设备联机后，主设备上的LED灯会持续亮，而从模块上的LED灯，每个3秒左右会闪烁一次。根据以上操作，两主从设备的蓝牙模块，就可以进			行无线数据的传输。
 
@@ -2510,7 +2579,7 @@ delay(500);
 
 2. 我们先使用USB转串口模块，将从机蓝牙模块与电脑连接，选择正确的串口号，设置波特率为115200，此时从机可以接收到信息，看到串口每隔0.5秒循环交替打印“A”和“B”。
 
-![img](zh_img/new(65).png)
+![img](zh_img/new(66).png)
 
  
 
@@ -2526,7 +2595,7 @@ delay(500);
 
 https://www.keyestudio.com/search/?Keyword=mecanum
 
-![img](zh_img/new(66).png)
+![img](zh_img/new(67).png)
 
  
 
@@ -2536,7 +2605,7 @@ https://www.keyestudio.com/search/?Keyword=mecanum
 
 https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 
-![img](zh_img/new(67).png)
+![img](zh_img/new(68).png)
 
  
 
@@ -2550,7 +2619,7 @@ https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 
 根据我们所安装的体感运动手套，我们先了解整体的方向。手指朝前，手掌左右翻滚，这是在绕Y轴运动。手不移动的情况下为0°，手往左边向下滚动为负数（-180°），往右向下滚动则为正数（+180°）。
 
-![img](zh_img/new(68).png)
+![img](zh_img/new(69).png)
 
  
 
@@ -2558,7 +2627,7 @@ https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 
 手指朝前，以手掌心为中心，手上下移动，这是在绕X轴旋转。手不移动的情况下为0°，手往上抬为正数（+180°），手往下放为负数（-180°）。
 
-![img](zh_img/new(69).png)
+![img](zh_img/new(70).png)
 
  
 
@@ -2584,7 +2653,7 @@ https://www.keyestudio.com/search/?&Keyword=car&Sort=4d&page=1
 
 烧录完代码后打开串口，即可看到手势数据。
 
-![img](zh_img/new(70).png)
+![img](zh_img/new(71).png)
 
  
 
@@ -3079,7 +3148,7 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 接下来，我们来完成体感手套控制麦克纳姆轮的代码。
 
-![img](zh_img/new(71).png)
+![img](zh_img/new(72).png)
 
  
 
@@ -3087,7 +3156,7 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 基于麦克纳姆轮技术的全方位的小车，可以实现前行、横移、[斜行](https://baike.baidu.com/item/斜行/5135999?fromModule=lemma_inlink)、旋转及其组合等运动方式。这种全方位移动方式是基于一个有许多位于[机轮](https://baike.baidu.com/item/机轮/5308297?fromModule=lemma_inlink)周边的[轮轴](https://baike.baidu.com/item/轮轴/1872661?fromModule=lemma_inlink)的中心轮的原理上，这些成角度的周边轮轴把一部分的机轮转向力转化到一个机轮[法向力](https://baike.baidu.com/item/法向力/9444144?fromModule=lemma_inlink)上面。
 
-![img](zh_img/new(72).png)
+![img](zh_img/new(73).png)
 
  
 
@@ -3099,7 +3168,7 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
  
 
-![img](zh_img/new(73).png)
+![img](zh_img/new(74).png)
 
  
 
@@ -3123,9 +3192,9 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 ​	AT指令：**AT+SEADV534d4152542d00** 让从机进入配对模式，上电自动连接
 
-------
+具体步骤，可参照[5.6.6 蓝牙主机连接从机](#蓝牙主机连接从机)。
 
-具体步骤，可参照[5.6.6](#蓝牙主机连接从机)。
+------
 
 我们还需要定义不同的动作姿态对应的功能，如左倾斜≥-40°表示左转，右倾斜≥40°表示右转等，扩展板上还带有两个按键，可通过按键，切换对小车的功能控制。
 
@@ -3158,20 +3227,24 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gyrox, float g
 
 第三种按键功能：
 
-D7按键被按时开七彩灯，再按一次为关七彩灯，
+- D7按键被按时开七彩灯，再按一次为关七彩灯，
 
-- n 代码：Serial.print("t")；//开
-
-- n 代码：Serial.print("u")；//关
+  - 代码：Serial.print("t")；//开
 
 
+  - 代码：Serial.print("u")；//关
 
 
-D8按键被按时开RGB灯，再按一次为关RGB灯
 
-- n 代码：Serial.print("m")；//开
 
-- n 代码：Serial.print("o")；//关
+- 
+  D8按键被按时开RGB灯，再按一次为关RGB灯
+
+  - 代码：Serial.print("m")；//开
+
+
+  - 代码：Serial.print("o")；//关
+
 
 ------
 
